@@ -19,8 +19,7 @@ Optimalkan bagian ini karena sebagian besar traffic berasal dari link bio Instag
 - **Sub-headline:** "Optimalisasi performa mesin untuk ECU Standar Honda dan Juken 5 (BRT). Proses aman, hasil instan."
 - **Tombol Aksi (CTA Utama):** Tombol merah mencolok dengan efek hover yang responsif. Teks: "Hubungi Admin via WA" atau "Konsultasi Sekarang (Gratis)".
 Untuk tombol CTA WhatsApp, buatkan fungsi rotasi otomatis 50:50 antara dua nomor WhatsApp admin ya.
-  - *Catatan:* Link WA harus menggunakan format teks otomatis, contoh: `https://wa.me/6281338245602?text=Halo%20DRP%20Remap,%20saya%20lihat%20dari%20website.%20Mau%20tanya-tanya/booking%20jadwal%20remap%20untuk%20motor%20saya%20dong.`
-  dan `https://wa.me/6287743632413?text=Halo%20DRP%20Remap,%20saya%20lihat%20dari%20website.%20Mau%20tanya-tanya/booking%20jadwal%20remap%20untuk%20motor%20saya%20dong.`
+  - *Catatan:* Link WA harus menggunakan format teks otomatis, contoh: `https://wa.me/62xxxxxxxxxxx?text=Halo%20DRP%20Remap,%20saya%20lihat%20dari%20website.%20Mau%20tanya-tanya/booking%20jadwal%20remap%20untuk%20motor%20saya%20dong.`
 
 ### C. Keunggulan Section ("Kenapa Harus Remap di DRP?")
 Tampilkan dalam bentuk grid 3 atau 4 card dengan icon minimalis modern:
