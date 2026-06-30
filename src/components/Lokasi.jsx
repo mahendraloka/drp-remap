@@ -90,7 +90,7 @@ export default function Lokasi() {
                 </button>
                 
                 <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=Kecamatan+Margoyoso+Pati"
+                  href="https://www.google.com/maps/dir/-6.7567616,111.0310912/DRP+Remap+Ecu+Pati,+723R%2BG7G,+Unnamed+Road,+Kaborongan,+Pati+Lor,+Kec.+Pati,+Kabupaten+Pati,+Jawa+Tengah+59111/@-6.7519817,111.0246896,15z/data=!4m10!4m9!1m1!4e1!1m5!1m1!1s0x2e70d3003e53a5e1:0x128593e8ceda19ea!2m2!1d111.0407164!2d-6.7461753!3e0?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center gap-2 bg-drp-red hover:bg-drp-red-dark text-white py-3 px-4 rounded-lg text-sm font-racing uppercase tracking-wider transition-colors duration-200"
