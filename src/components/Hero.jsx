@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MessageSquare, Gauge, Cpu, CheckCircle } from 'lucide-react';
+import logoDrp from '../assets/logodrp.png';
 
 export default function Hero() {
   const [waLink, setWaLink] = useState('');
@@ -28,15 +29,13 @@ export default function Hero() {
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-drp-red/10 border border-drp-red/30 mb-8 animate-fade-in-down">
-          <span className="flex h-2 w-2 relative">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-drp-red opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-drp-red"></span>
-          </span>
-          <span className="font-racing text-xs tracking-widest text-drp-red uppercase font-bold">
-            ECU REMAP PATI & BRT JUKEN TUNING
-          </span>
+        {/* Hero Logo */}
+        <div className="flex justify-center mb-2 sm:-mb-12">
+          <img 
+            src={logoDrp} 
+            alt="DRP Remap Logo" 
+            className="h-24 sm:h-44 md:h-52 w-auto object-contain drop-shadow-[0_0_30px_rgba(220,38,38,0.25)]"
+          />
         </div>
 
         {/* Main Heading */}

@@ -23,7 +23,7 @@ export default function FAQ() {
     },
     {
       question: "Apakah pengerjaan remap ini bergaransi?",
-      answer: "Ya, kami memberikan garansi setting ulang gratis selama 1 bulan apabila dirasa kurang pas atau ingin disesuaikan kembali (berlaku untuk semua kategori remap ECU standar)."
+      answer: "Ya, kami memberikan garansi setting ulang 1x selama tidak ganti spesifikasi motor apabila dirasa kurang pas atau ingin disesuaikan kembali (berlaku untuk semua kategori remap ECU standar)."
     }
   ];
 

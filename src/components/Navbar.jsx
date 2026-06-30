@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
+import logoDrp from '../assets/logodrp.png';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [waLink, setWaLink] = useState('');
+
+  const waNumbers = [
+    'https://wa.me/6281338245602?text=Halo%20DRP%20Remap,%20saya%20lihat%20dari%20website.%20Mau%20tanya-tanya/booking%20jadwal%20remap%20untuk%20motor%20saya%20dong.',
+    'https://wa.me/6287743632413?text=Halo%20DRP%20Remap,%20saya%20lihat%20dari%20website.%20Mau%20tanya-tanya/booking%20jadwal%20remap%20untuk%20motor%20saya%20dong.'
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +21,11 @@ export default function Navbar() {
       }
     };
     window.addEventListener('scroll', handleScroll);
+    
+    // Choose WA number
+    const randomIndex = Math.random() < 0.5 ? 0 : 1;
+    setWaLink(waNumbers[randomIndex]);
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -24,13 +36,10 @@ export default function Navbar() {
         : 'bg-transparent py-5'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-12">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <a href="#home" className="flex items-center group">
-            <span className="inline-block w-3.5 h-3.5 bg-drp-red rounded-full mr-2 border border-white/60 animate-pulse"></span>
-            <span className="font-racing text-2xl font-black italic tracking-wider text-white">
-              DRP <span className="text-drp-red group-hover:text-white transition-colors duration-300">REMAP</span>
-            </span>
+            <img src={logoDrp} alt="DRP Remap" className="h-10 sm:h-28 w-auto object-contain" />
           </a>
 
           {/* Desktop Navigation */}
@@ -41,7 +50,9 @@ export default function Navbar() {
             <a href="#lokasi" className="text-sm font-medium tracking-wide uppercase hover:text-drp-red transition-colors duration-200">Lokasi</a>
             
             <a 
-              href="#whatsapp-cta"
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-drp-red text-white font-racing text-sm tracking-wider uppercase px-4 py-2 rounded-md hover:bg-drp-red-dark transition-all duration-300 shadow-md shadow-drp-red/10 hover:shadow-drp-red/30 transform hover:-translate-y-0.5"
             >
               Konsultasi
@@ -98,7 +109,9 @@ export default function Navbar() {
           </a>
           <div className="pt-2 px-3">
             <a
-              href="#whatsapp-cta"
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               className="flex items-center justify-center gap-2 w-full bg-drp-red text-white text-center font-racing tracking-wider uppercase py-3 rounded-md hover:bg-drp-red-dark transition-all duration-300"
             >

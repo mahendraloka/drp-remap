@@ -3,7 +3,7 @@ import { MapPin, Clock, Copy, Check, Navigation } from 'lucide-react';
 
 export default function Lokasi() {
   const [copied, setCopied] = React.useState(false);
-  const alamatLengkap = "DRP Remap ECU, Kec. Margoyoso (Pati Area), Kabupaten Pati, Jawa Tengah 59154";
+  const alamatLengkap = "DRP Remap ECU Pati, Kaborongan, Pati Lor, Kec. Pati, Kabupaten Pati, Jawa Tengah 59111";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(alamatLengkap);
@@ -106,7 +106,7 @@ export default function Lokasi() {
           {/* Google Maps Embed */}
           <div className="lg:col-span-7 bg-[#0b0f19] border border-slate-800 rounded-xl overflow-hidden min-h-[300px] h-full relative">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126804.8115629199!2d111.00030584999999!3d-6.75151525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70d24c0d0a7905%3A0x3027a764d7667d0!2sKec.%20Pati%2C%20Kabupaten%20Pati%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31697.177363937415!2d111.03054100087331!3d-6.75189989949509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70d2549ede92f1%3A0xeb398a85a2b6bd5e!2sApril%20Olshop!5e0!3m2!1sid!2sid!4v1782846841237!5m2!1sid!2sid"
               className="w-full h-full min-h-[350px] border-0 grayscale opacity-85 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
               allowFullScreen=""
               loading="lazy"

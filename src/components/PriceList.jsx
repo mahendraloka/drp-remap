@@ -25,7 +25,6 @@ export default function PriceList() {
         "Unlock RPM Limiter",
         "Peningkatan Torsi Harian",
         "Nafas Motor Lebih Panjang",
-        "Garansi 1 Bulan"
       ]
     },
     {
@@ -38,7 +37,6 @@ export default function PriceList() {
         "Kalibrasi Fuel Map (BBM)",
         "Tuning Ignition Timing",
         "Akselerasi Padat & Responsif",
-        "Garansi 1 Bulan"
       ]
     },
     {
@@ -51,7 +49,6 @@ export default function PriceList() {
         "Fine Tuning Maksimal",
         "Cocok untuk Porting & Bore Up",
         "Analisis Pembakaran Mesin",
-        "Garansi 1 Bulan"
       ]
     },
     {

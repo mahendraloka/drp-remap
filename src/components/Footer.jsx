@@ -1,4 +1,5 @@
 import React from 'react';
+import logoDrp from '../assets/logodrp.png';
 
 export default function Footer() {
   return (
@@ -8,10 +9,7 @@ export default function Footer() {
           
           {/* Logo Brand */}
           <div className="flex items-center">
-            <span className="inline-block w-2.5 h-2.5 bg-drp-red rounded-full mr-2"></span>
-            <span className="font-racing text-lg font-black italic tracking-wider text-white">
-              DRP <span className="text-drp-red">REMAP</span>
-            </span>
+            <img src={logoDrp} alt="DRP Remap" className="h-8 sm:h-[72px] w-auto object-contain opacity-90" />
           </div>
 
           {/* Copyright text */}
