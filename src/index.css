@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700;1,900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-drp-red: #DC2626;
+  --color-drp-red-light: #EF4444;
+  --color-drp-red-dark: #B91C1C;
+  
+  --color-drp-dark: #050811;
+  --color-drp-dark-card: #0b0f19;
+  --color-drp-dark-border: #1e293b;
+  
+  --font-racing: "Barlow Condensed", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@utility bg-noise {
+  background-image: radial-gradient(rgba(220, 38, 38, 0.1) 1px, transparent 0), radial-gradient(rgba(220, 38, 38, 0.1) 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+@utility bg-stripes {
+  background-image: linear-gradient(135deg, rgba(220, 38, 38, 0.03) 25%, transparent 25%, transparent 50%, rgba(220, 38, 38, 0.03) 50%, rgba(220, 38, 38, 0.03) 75%, transparent 75%, transparent);
+  background-size: 60px 60px;
+}
+
+@layer base {
+  body {
+    @apply bg-drp-dark text-slate-300 font-sans antialiased selection:bg-drp-red selection:text-white;
+    background-color: #050811;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-racing tracking-wide uppercase text-white;
+  }
+}
+
+/* Custom effects and animations */
+.glow-border {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, #DC2626, #B91C1C, transparent, #DC2626);
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-border:hover::after {
+  opacity: 0.6;
+}
+
+.red-glow {
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.3);
+}
+
+.red-glow-hover {
+  transition: all 0.3s ease;
+}
+
+.red-glow-hover:hover {
+  box-shadow: 0 0 25px rgba(220, 38, 38, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
