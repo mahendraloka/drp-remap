@@ -17,53 +17,71 @@ export default function PriceList() {
   const packages = [
     {
       title: "Motor Standar",
-      sub: "Under 150cc",
+      sub: "Under 150cc (Scoopy, Beat, Vario 125/150, Genio, dll)",
       price: "Rp 200.000",
       popular: false,
       features: [
         "Khusus ECU Standar Honda",
-        "Unlock RPM Limiter",
-        "Peningkatan Torsi Harian",
-        "Nafas Motor Lebih Panjang",
+        "Unlock RPM Limiter Maksimal",
+        "Peningkatan Torsi & Tenaga Harian",
+        "Tarikan Mesin Lebih Enteng & Padat",
+        "Konsumsi BBM Tetap Efisien"
+      ]
+    },
+    {
+      title: "Motor Standar & Tune Up",
+      sub: "160cc Series (Vario 160, PCX 160, ADV 160, Stylo 160)",
+      price: "Rp 270.000",
+      popular: false,
+      features: [
+        "Khusus ECU Standar Honda 160cc (eSP+)",
+        "Unlock RPM Limiter Sesuai Karakter",
+        "Optimasi Air Fuel Ratio (AFR) & Pengapian",
+        "Akselerasi Padat & Hilangkan Ngempos",
+        "Sangat Cocok untuk Kirian / CVT Custom"
       ]
     },
     {
       title: "Up Spek Harian",
-      sub: "Non-Kompetisi (Under 165cc)",
+      sub: "Non-Kompetisi / Under 165cc (Exhaust, CVT, Air Filter)",
       price: "Rp 250.000",
       popular: true,
       features: [
-        "Knalpot Racing / Bore Up Ringan",
-        "Kalibrasi Fuel Map (BBM)",
-        "Tuning Ignition Timing",
-        "Akselerasi Padat & Responsif",
+        "Penyesuaian Knalpot Racing & Filter",
+        "Kalibrasi Fuel Map (BBM) & Ignition",
+        "Penyesuaian dengan Ubahan Kirian / CVT",
+        "Akselerasi Padat & Responsif di Semua RPM",
+        "Menghilangkan Deselerasi Nembak-Nembak"
       ]
     },
     {
       title: "Spek Bore Up / FFA",
-      sub: "165cc++ (Kompetisi / Spek Tinggi)",
-      price: "Rp 350.000++",
+      sub: "165cc++ (Kompetisi / Spek Tinggi / Klep Lebar)",
+      price: "Rp 300.000",
+      pricePrefix: "Start From",
       popular: false,
       features: [
-        "Custom Map Sesuai Spek Mesin",
-        "Fine Tuning Maksimal",
-        "Cocok untuk Porting & Bore Up",
-        "Analisis Pembakaran Mesin",
+        "Custom Map Sesuai Spek Bore Up / FFA",
+        "Fine Tuning Maksimal & Limit RPM Custom",
+        "Kalibrasi Noken As & Klep Lebar / TB Gede",
+        "Penyesuaian Ignition Timing Ekstrem",
+        "Analisis Pembakaran Mesin Detail"
       ]
     },
     {
       title: "Juken 5 Tuning",
-      sub: "Semua Tipe Motor dengan Juken 5",
+      sub: "Semua Tipe Motor dengan ECU Juken 5 BRT",
       price: "Rp 100.000",
       priceSuffix: " / per 1 core",
       popular: false,
       nonGaransi: true,
       features: [
-        "Setting Ulang Map Juken 5",
-        "Kalibrasi Throttle Position",
-        "Tuning Fuel & Ignition Curve",
-        "Khusus Knalpot / Filter Udara Baru",
-        "Non Garansi (Sesuai Karakter Mesin)"
+        "Setting Ulang Parameter Juken 5",
+        "Kalibrasi Throttle Position Sensor (TPS)",
+        "Tuning Fuel & Ignition Curve per Core",
+        "Penyesuaian Debit Injector & Limit RPM",
+        "Khusus Knalpot Racing / Filter Udara Baru",
+        "Non Garansi (Tuning Sesuai Spek Mesin)"
       ]
     }
   ];
@@ -83,14 +101,14 @@ export default function PriceList() {
           <div className="w-16 h-1 bg-drp-red mx-auto mt-6"></div>
         </div>
 
-        {/* Packages Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Packages Flex Container for Balancing 5 Cards */}
+        <div className="flex flex-wrap justify-center gap-8">
           {packages.map((pkg, index) => (
             <div 
               key={index} 
-              className={`relative flex flex-col rounded-xl overflow-hidden transition-all duration-300 ${
+              className={`relative flex flex-col rounded-xl overflow-hidden transition-all duration-300 w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-sm ${
                 pkg.popular 
-                  ? 'bg-drp-dark border-2 border-drp-red shadow-xl shadow-drp-red/10 scale-105 z-10 md:translate-y-[-8px]' 
+                  ? 'bg-drp-dark border-2 border-drp-red shadow-xl shadow-drp-red/10 scale-105 z-10 lg:translate-y-[-8px]' 
                   : 'bg-[#0b0f19]/60 border border-slate-800 hover:border-slate-700 hover:translate-y-[-4px]'
               }`}
             >
@@ -109,18 +127,25 @@ export default function PriceList() {
                 <p className="text-xs text-slate-500 mt-1 min-h-[32px]">
                   {pkg.sub}
                 </p>
-                <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-racing">
-                    {pkg.price}
-                  </span>
-                  {pkg.priceSuffix && (
-                    <span className="text-xs text-slate-500 ml-1">
-                      {pkg.priceSuffix}
+                <div className="mt-4 min-h-[56px] flex flex-col justify-end">
+                  {pkg.pricePrefix && (
+                    <span className="text-xs font-bold text-drp-red uppercase tracking-wider mb-0.5 block font-sans">
+                      {pkg.pricePrefix}
                     </span>
                   )}
+                  <div className="flex items-baseline">
+                    <span className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-racing">
+                      {pkg.price}
+                    </span>
+                    {pkg.priceSuffix && (
+                      <span className="text-xs text-slate-500 ml-1">
+                        {pkg.priceSuffix}
+                      </span>
+                    )}
+                  </div>
                 </div>
                 {pkg.nonGaransi && (
-                  <div className="mt-2 flex items-center gap-1.5 text-xs text-amber-500/90 bg-amber-500/5 px-2.5 py-1 rounded border border-amber-500/10">
+                  <div className="mt-3 flex items-center gap-1.5 text-xs text-amber-500/90 bg-amber-500/5 px-2.5 py-1 rounded border border-amber-500/10">
                     <Info className="w-3.5 h-3.5 shrink-0" />
                     <span>Non Garansi (Tuning Juken)</span>
                   </div>

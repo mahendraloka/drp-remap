@@ -48,7 +48,7 @@ export default function Lokasi() {
                   </div>
                   <div className="flex justify-between gap-4">
                     <span>Senin:</span>
-                    <span className="font-semibold text-white">Buka 24 Jam</span>
+                    <span className="font-semibold text-white">07.00 - 21.00 WIB</span>
                   </div>
                 </div>
               </div>
